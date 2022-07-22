@@ -25,7 +25,7 @@
 import { defineComponent } from 'vue'
 
 export default defineComponent({
-  name: 'EssentialLink',
+  name: 'Menu',
   props: {
     title: {
       type: String,

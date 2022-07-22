@@ -68,7 +68,16 @@ module.exports = configure(function (ctx) {
       chainWebpack (chain) {
         chain.plugin('eslint-webpack-plugin')
           .use(ESLintPlugin, [{ extensions: ['js', 'vue'] }])
-      }
+      },
+      env: ctx.dev
+        ? { // DESARROLLO
+            API_URL: 'https://pokeapi.co/api/v2',
+            VERSION: '1.0'
+          }
+        : { // PRODUCCION
+            API_URL: 'https://pokeapi.co/api/v2',
+            VERSION: '1.0'
+          }
     },
 
     // Full list of options: https://v2.quasar.dev/quasar-cli/quasar-conf-js#Property%3A-devServer

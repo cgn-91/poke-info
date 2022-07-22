@@ -1,1 +1,42 @@
 // app global css in SCSS form
+.main{
+    padding-left: 0px !important;
+}
+.mainHeader{
+    left: 0px !important;
+    background-color: transparent;
+}
+
+.mainIMG{
+    width: 100%;
+    opacity: 70%
+}
+
+.mainBTN{
+    font-size: 40px;
+    margin-left: 15px;
+    color: #000
+}
+
+.prueba{
+    background-color: red;
+    width: 100%;
+    height: 100%;
+}
+
+@media (max-width: 1200px) {
+    .mainHeader{
+        display: none;
+    }
+    .mainHeaderMobile{
+        background-color: transparent !important;
+    }
+    .mainIMG{
+        opacity: 70%;
+        height: 1200px;
+    }
+    .mainToolbar{
+        color: #000;
+        font-size: 40px;
+    }
+}

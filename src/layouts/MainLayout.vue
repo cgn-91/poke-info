@@ -1,16 +1,16 @@
 <template>
   <q-layout view="lHh Lpr lFf">
-    <div>
-      <q-header class="mainHeader" elevated>
+    <div class="mainHeader">
+      <q-header elevated>
         <q-toolbar>
             <q-btn href="#/home" outline rounded color="black" label="Home" icon="home" class="mainBTN"/>
             <q-btn href="#/generations" outline rounded color="black" label="Generations" icon="spa" class="mainBTN"/>
         </q-toolbar>
       </q-header>
     </div>
-    <div class="lt-lg">
+    <div class="mainHeaderMobile">
       <div>
-        <q-header class="mainHeaderMobile" elevated>
+        <q-header elevated>
           <q-toolbar>
             <q-btn
               flat

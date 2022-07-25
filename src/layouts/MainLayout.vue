@@ -1,7 +1,7 @@
 <template>
   <q-layout view="lHh Lpr lFf">
     <div class="mainHeader">
-      <q-header elevated>
+      <q-header elevated style="left: 0px;">
         <q-toolbar>
             <q-btn href="#/home" outline rounded color="black" label="Home" icon="home" class="mainBTN"/>
             <q-btn href="#/generations" outline rounded color="black" label="Generations" icon="spa" class="mainBTN"/>
@@ -57,6 +57,7 @@
 </template>
 
 <script>
+
 import Menu from 'components/Menu.vue'
 
 const linksList = [

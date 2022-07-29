@@ -7,44 +7,41 @@
                 </ul>
             </div>
         </div>
-        <div class="contenedor generationsContent">
-            <div class="row">
-                <div class="pokeLeft">
-                        <div class="sphere"></div>
-                        <div class="circulo" style="background: red;"></div>
-                        <div class="circulo" style="background: yellow"></div>
-                        <div class="circulo" style="background: green"></div>
-                </div>
-                <div class="pokeRight">
-                    hola
-                </div>
-            </div>
+        <div class="row generationsContent">
+            <Pokedex :generation="this.name"></Pokedex>
         </div>
     </q-item-section>
 </template>
 
 <script>
 import { defineComponent, ref } from 'vue'
-import PetitionsResource from 'src/api/resources/Petitions'
+import Pokedex from 'components/Pokedex'
+import Petitions from 'src/api/resources/Petitions'
 
 export default defineComponent({
   name: 'Generations',
 
+  components: {
+    Pokedex
+  },
+
   setup () {
     return {
       generations: ref([]),
-      totalGenerations: ref(null)
+      totalGenerations: ref(null),
+      generation: ref({}),
+      name: ref('')
     }
   },
 
   methods: {
     async getGenerations () {
-      this.totalGenerations = await PetitionsResource.getGenerations()
+      this.totalGenerations = await Petitions.getGenerations()
       this.generations = this.totalGenerations.results
     },
-    doClick (id) {
-      document.getElementById(id).click()
-      console.log(id)
+    async doClick (id) {
+      this.generation = await Petitions.getGeneration(id + 1)
+      this.name = this.generation.name
     }
   },
   created () {

@@ -30,29 +30,23 @@
 
 .generationsContent{
     background-color: white;
-    height: 100vh;
     width: 100%;
-    overflow-y: auto;
+    justify-content: center;
 }
 
 .pokeLeft{
     background-color: #2B64FC;
     border-top-left-radius: 90px;
-    height: 100vh;
-    width: 58%;
+    width: 60%;
     display: inline-block;
-    position: relative;
-    margin: 10px;
     margin-right: 0px;
     border-right: 1px solid black;
-    left: 0px;
 }
 
 .pokeRight{
     background-color: green;
     border-top-right-radius: 90px;
     width: 35%;
-    margin: 10px;
     margin-left: 0px;
     border-left: 1px solid black;
     display: inline-block;
@@ -66,6 +60,12 @@
 .btnGenerations{
     margin: 15px;
     width: 150px;
+}
+
+.btnPokedex{
+    margin: 15px;
+    width: auto;
+    display: inline;
 }
 
 @media (max-width: 767.9px) {
@@ -86,6 +86,24 @@
         margin-bottom: 0px;
         color: #000
     }
+    .pokeLeft{
+        margin: 10px;
+        margin-right: 0px;
+        width: 44% !important
+    }
+    .pokeRight{
+        margin: 10px;
+        margin-left: 0px;
+        width: 50% !important
+    }
+    .btnPokedex{
+        margin: 5px;
+        width: auto;
+    }
+    .imgPokedex{
+        width: 90%;
+        margin-left: 5%;
+    }
 }
 
 @media (min-width:768px) and (max-width: 1279.9px) {
@@ -104,6 +122,26 @@
     .mainToolbar{
         color: #000;
         font-size: 30px;
+    }
+    .pokeLeft{
+        margin: 19px;
+        margin-right: 0px;
+        width: 50% !important
+    }
+    .pokeRight{
+        margin: 19px;
+        margin-left: 0px;
+        width: 45% !important
+    }
+    .btnPokedex{
+        margin: 5px;
+        margin-left: 30px;
+        width: 40%;
+        display: inline;
+    }
+    .imgPokedex{
+        width: 70%;
+        margin-left: 15%;
     }
 }
 
@@ -125,5 +163,26 @@
         background-color: red;
         justify-content: left;
         width: 100%;
+    }
+
+    .pokeLeft{
+        margin-top: 50px;
+        margin-right: 0px;
+        width: 40% !important
+    }
+    .pokeRight{
+        margin-top: 50px;
+        margin-left: 0px;
+        width: 40% !important
+    }
+    .btnPokedex{
+        margin: 5px;
+        margin-left: 30px;
+        width: 40%;
+        display: inline;
+    }
+    .imgPokedex{
+        width: 70%;
+        margin-left: 15%;
     }
 }

@@ -2,7 +2,7 @@ import Resource from './Resource'
 
 class PetitionsResource extends Resource {
   async getPokemon (id) {
-    return this.axios.get('/pokemon/', id).then(response => response.data).catch(error => error)
+    return this.axios.get('/pokemon/' + id).then(response => response.data).catch(error => error)
   }
 
   async getGenerations () {
@@ -10,7 +10,7 @@ class PetitionsResource extends Resource {
   }
 
   async getGeneration (id) {
-    return this.axios.get('/generation/', id).then(response => response.data).catch(error => error)
+    return this.axios.get('/generation/' + id).then(response => response.data).catch(error => error)
   }
 }
 
